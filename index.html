@@ -13,5 +13,52 @@
       href="./images/to-do-list.png"
     />
   </head>
-  <body></body>
+  <body class="bg-veryLightGray text-base">
+    <div
+      class="absolute -z-10 w-full bg-mobile md:bg-desk h-48 bg-center bg-no-repeat bg-cover top-0"
+    ></div>
+    <header class="container flex justify-between items-center my-8">
+      <h1 class="text-white align-middle h-[41px]">TODO</h1>
+
+      <img src="./images/toggle-to-dark.svg" class="w-5" />
+    </header>
+    <form class="container bg-white flex items-center px-5 rounded-md mb-4">
+      <button
+        type="submit"
+        class="appearance-none h-5 w-5 border rounded-full mr-3"
+      ></button>
+      <input
+        type="text"
+        placeholder="Create a new todo"
+        class="grow py-[10px] outline-none"
+      />
+    </form>
+
+    <main class="container bg-white rounded-md">
+      <ul>
+        <li class="border-b py-[10px] px-5 flex items-center">
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            class="h-5 w-5 rounded-full mr-3 appearance-none border"
+          />
+          <span class="line-through text-[#D1D2DA]">
+            Complete online JavaScript course
+          </span>
+          <img src="./images/close.svg" alt="" class="block ml-auto" />
+        </li>
+        <li class="border-b py-[10px] px-5 flex items-center">
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            class="h-5 w-5 rounded-full mr-3 appearance-none border"
+          />
+          <span class=""> Jog around the park 3x </span>
+          <img src="./images/close.svg" alt="" class="block ml-auto" />
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>

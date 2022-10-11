@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* :root {
+    --veryLightGray: "hsl(0, 0%, 98%)",
+    --veryLightGrayishBlue: "hsl(236, 33%, 92%)",
+    --LightGrayishBlue: "hsl(233, 11%, 84%)",
+    --darkGrayishBlue: "hsl(236, 9%, 61%)",
+    --veryDarkGrayishBlue: "hsl(235, 19%, 35%)",
+    --veryDarkBlue: "hsl(235, 21%, 11%)",
+    --veryDarkDesaturatedBlue: "hsl(235, 24%, 19%)",
+    --lightGrayishBlue: "hsl(234, 39%, 85%)",
+    --lightGrayishBlueHover: "hsl(236, 33%, 92%)",
+    --darkGrayishBlue: "hsl(234, 11%, 52%)",
+    --veryDarkGrayishBlue: "hsl(233, 14%, 35%)",
+    --veryDarkGrayishBlue: "hsl(237, 14%, 26%)",
+    --light-background: '#ff0000';
+    --dark-background: '#ff0000';
+  } */
+
+@layer base {
+  h1 {
+    @apply text-lg font-bold md:text-xl;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto sm:max-w-[325px] md:max-w-[400px] lg:max-w-[540px];
+  }
+}
