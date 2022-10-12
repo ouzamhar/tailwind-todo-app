@@ -20,6 +20,10 @@
     --dark-background: '#ff0000';
   } */
 
+:root {
+  --color-bg: hsl(0, 0%, 98%);
+}
+
 @layer base {
   h1 {
     @apply text-lg font-bold md:text-xl;
@@ -29,5 +33,21 @@
 @layer components {
   .container {
     @apply mx-auto sm:max-w-[325px] md:max-w-[400px] lg:max-w-[540px];
+  }
+  .checkbox {
+    @apply h-5 w-5 rounded-full mr-3 appearance-none border cursor-pointer;
+  }
+  .checkbox:hover {
+    background: linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+      linear-gradient(135deg, #55ddff 0%, #c058f3 100%) border-box;
+    border-color: transparent;
+  }
+  .checkbox:checked {
+    background: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"/></svg>'),
+      linear-gradient(135deg, #55ddff 0%, #c058f3 100%) border-box;
+    border-color: transparent;
+  }
+  .checkbox:checked + label {
+    @apply line-through text-[#D1D2DA];
   }
 }
