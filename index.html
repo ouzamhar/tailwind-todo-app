@@ -29,36 +29,23 @@
       <button
         type="submit"
         class="appearance-none h-5 w-5 border rounded-full mr-3"
+        
       ></button>
       <input
         type="text"
         placeholder="Create a new todo"
         class="grow outline-none"
+        name="todo"
       />
     </form>
 
     <main class="container relative rounded-md mb-4 shadow-2md ">
       <!-- list of todos -->
-        <ul>
+        <ul id="todos">
           <li class="box border-b first:rounded-tr-md first:rounded-tl-md">
             <input type="checkbox" id="test" class="checkbox" checked />
             <span> Complete online JavaScript course </span>
-            <img src="./images/close.svg" alt="" class="block ml-auto" />
-          </li>
-          <li class="box border-b">
-            <input type="checkbox" id="test" class="checkbox" />
-            <span> Complete online JavaScript course </span>
-            <img src="./images/close.svg" alt="" class="block ml-auto" />
-          </li>
-          <li class="box border-b">
-            <input type="checkbox" id="test" class="checkbox" />
-            <span> Complete online JavaScript course </span>
-            <img src="./images/close.svg" alt="" class="block ml-auto" />
-          </li>
-          <li class="box border-b">
-            <input type="checkbox" id="test" class="checkbox" />
-            <span> Complete online JavaScript course </span>
-            <img src="./images/close.svg" alt="" class="block ml-auto" />
+            <img src="./images/close.svg" alt="" class="block ml-auto delete"/>
           </li>
         </ul>
         <!-- list info -->
@@ -83,5 +70,6 @@
     <p class="cursor-pointer hover:text-[#494C6B]">Active</p>
     <p class="cursor-pointer hover:text-[#494C6B]">Completed</p>
   </div>
+  <script src="./js/index.js"></script>
   </body>
 </html>
