@@ -35,8 +35,7 @@
     @apply mx-auto w-[80%] max-w-[540px];
   }
   .checkbox {
-    @apply h-5 w-5 rounded-full mr-3 appearance-none border cursor-pointer;
-    /* vertical-align: middle; */
+    @apply h-5 w-5 rounded-full mr-3 appearance-none border cursor-pointer shrink-0;
   }
   .checkbox:hover {
     background: linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
@@ -55,7 +54,11 @@
   .box {
     @apply py-[1.25em] md:py-[1em] min-h-[48px] flex items-center bg-white px-5;
   }
+  button[disabled] {
+    color: #b1b3c9 !important;
+  }
   .active {
-    @apply text-[#3A7CFD];
+    color: #3a7cfd !important;
+    pointer-events: none;
   }
 }

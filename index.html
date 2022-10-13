@@ -36,6 +36,7 @@
         placeholder="Create a new todo"
         class="grow outline-none"
         name="todo"
+        autocomplete="off"
       />
     </form>
 
@@ -44,21 +45,21 @@
         <ul id="todos">
           <li class="box border-b first:rounded-tr-md first:rounded-tl-md">
             <input type="checkbox" id="test" class="checkbox" checked />
-            <span> Complete online JavaScript course </span>
-            <img src="./images/close.svg" alt="" class="block ml-auto delete"/>
+            <span class=""> Learn Tailwind </span>
+            <img src="./images/close.svg" alt="" class="block ml-auto delete cursor-pointer p-2 -mr-2"/>
           </li>
         </ul>
         <!-- list info -->
         <div class="box justify-between text-sm text-[#9495A5] rounded-bl-md rounded-br-md">
-          <p>5 items left</p>
+          <p id="count">1 items left</p>
           <div
             class=" hidden md:flex space-x-3 font-bold"
           >
-          <p class="[&:not(.active):hover:text-[#494C6B] cursor-pointer] active ">All</p>
-          <p class="cursor-pointer hover:text-[#494C6B]">Active</p>
-          <p class="cursor-pointer hover:text-[#494C6B]">Completed</p>
+          <button class= "hover:text-[#494C6B] show-all active" onclick="getAll()">All</button>
+          <button  class="filter-active hover:text-[#494C6B]" onclick="getactive()">Active</button>
+          <button  class="filter-completed hover:text-[#494C6B]" onclick="getCompleted()" >Completed</button>
           </div>
-          <p class="cursor-pointer hover:text-[#494C6B]">Clear Completed</p>
+          <button id="clear-completed" class="hover:text-[#494C6B]" onclick="deleteComplete()">Clear Completed</button>
         </div>
       </div>
     </main>
@@ -66,9 +67,9 @@
     <div
     class=" relative container box md:hidden space-x-3 justify-center shadow-2md text-[#9495A5]  font-bold"
   >
-    <p class="[&:not(.active):hover:text-[#494C6B] cursor-pointer] active ">All</p>
-    <p class="cursor-pointer hover:text-[#494C6B]">Active</p>
-    <p class="cursor-pointer hover:text-[#494C6B]">Completed</p>
+    <button class= "hover:text-[#494C6B] show-all active" onclick="getAll()">All</button>
+    <button  class="filter-active hover:text-[#494C6B]" onclick="getactive()">Active</button>
+    <button  class="filter-completed hover:text-[#494C6B]" onclick="getCompleted()" >Completed</button>
   </div>
   <script src="./js/index.js"></script>
   </body>
