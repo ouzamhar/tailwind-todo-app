@@ -13,16 +13,19 @@
       href="./images/to-do-list.png"
     />
   </head>
-  <body class="bg-veryLightGray text-base">
+  <body class="bg-veryLightGray text-xs md:text-md text-[#494C6B]">
+    <!-- background image -->
     <div
-      class="absolute -z-10 w-full bg-mobile md:bg-desk h-48 bg-center bg-no-repeat bg-cover top-0"
+      class="absolute -z-10 w-full bg-mobile md:bg-desk h-48 md:h-[300px] bg-center bg-no-repeat bg-cover top-0"
     ></div>
-    <header class="container flex justify-between items-center my-8">
-      <h1 class="text-white align-middle h-[41px]">TODO</h1>
+    <!-- header -->
+    <header class="container flex justify-between items-end py-8 my-2 md:my-11">
+      <h1 class="text-white align-middle">TODO</h1>
 
       <img src="./images/toggle-to-dark.svg" class="w-5" />
     </header>
-    <form class="container bg-white flex items-center px-5 rounded-md mb-4">
+    <!-- input field -->
+    <form class="container box rounded-md mb-4">
       <button
         type="submit"
         class="appearance-none h-5 w-5 border rounded-full mr-3"
@@ -30,33 +33,55 @@
       <input
         type="text"
         placeholder="Create a new todo"
-        class="grow py-[10px] outline-none"
+        class="grow outline-none"
       />
     </form>
 
-    <main class="container bg-white rounded-md">
-      <ul>
-        <li class="border-b py-[10px] px-5 flex items-center">
-          <input
-            type="checkbox"
-            name=""
-            id="test"
-            class="checkbox"
-            checked="checked"
-          />
-          <label class="cursor-pointer" for="test">
-            Complete online JavaScript course
-          </label>
-          <img src="./images/close.svg" alt="" class="block ml-auto" />
-        </li>
-        <li class="border-b py-[10px] px-5 flex items-center">
-          <input type="checkbox" name="" id="test2" class="checkbox" />
-          <label class="cursor-pointer" for="test2">
-            Jog around the park 3x
-          </label>
-          <img src="./images/close.svg" alt="" class="block ml-auto" />
-        </li>
-      </ul>
+    <main class="container relative rounded-md mb-4 shadow-2md ">
+      <!-- list of todos -->
+        <ul>
+          <li class="box border-b first:rounded-tr-md first:rounded-tl-md">
+            <input type="checkbox" id="test" class="checkbox" checked />
+            <span> Complete online JavaScript course </span>
+            <img src="./images/close.svg" alt="" class="block ml-auto" />
+          </li>
+          <li class="box border-b">
+            <input type="checkbox" id="test" class="checkbox" />
+            <span> Complete online JavaScript course </span>
+            <img src="./images/close.svg" alt="" class="block ml-auto" />
+          </li>
+          <li class="box border-b">
+            <input type="checkbox" id="test" class="checkbox" />
+            <span> Complete online JavaScript course </span>
+            <img src="./images/close.svg" alt="" class="block ml-auto" />
+          </li>
+          <li class="box border-b">
+            <input type="checkbox" id="test" class="checkbox" />
+            <span> Complete online JavaScript course </span>
+            <img src="./images/close.svg" alt="" class="block ml-auto" />
+          </li>
+        </ul>
+        <!-- list info -->
+        <div class="box justify-between text-sm text-[#9495A5] rounded-bl-md rounded-br-md">
+          <p>5 items left</p>
+          <div
+            class=" hidden md:flex space-x-3 font-bold"
+          >
+          <p class="[&:not(.active):hover:text-[#494C6B] cursor-pointer] active ">All</p>
+          <p class="cursor-pointer hover:text-[#494C6B]">Active</p>
+          <p class="cursor-pointer hover:text-[#494C6B]">Completed</p>
+          </div>
+          <p class="cursor-pointer hover:text-[#494C6B]">Clear Completed</p>
+        </div>
+      </div>
     </main>
+    <!-- list filters -->
+    <div
+    class=" relative container box md:hidden space-x-3 justify-center shadow-2md text-[#9495A5]  font-bold"
+  >
+    <p class="[&:not(.active):hover:text-[#494C6B] cursor-pointer] active ">All</p>
+    <p class="cursor-pointer hover:text-[#494C6B]">Active</p>
+    <p class="cursor-pointer hover:text-[#494C6B]">Completed</p>
+  </div>
   </body>
 </html>

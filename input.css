@@ -32,10 +32,11 @@
 
 @layer components {
   .container {
-    @apply mx-auto sm:max-w-[325px] md:max-w-[400px] lg:max-w-[540px];
+    @apply mx-auto w-[80%] max-w-[540px];
   }
   .checkbox {
     @apply h-5 w-5 rounded-full mr-3 appearance-none border cursor-pointer;
+    /* vertical-align: middle; */
   }
   .checkbox:hover {
     background: linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
@@ -47,7 +48,14 @@
       linear-gradient(135deg, #55ddff 0%, #c058f3 100%) border-box;
     border-color: transparent;
   }
-  .checkbox:checked + label {
+
+  .checkbox:checked + span {
     @apply line-through text-[#D1D2DA];
+  }
+  .box {
+    @apply py-[1.25em] md:py-[1em] min-h-[48px] flex items-center bg-white px-5;
+  }
+  .active {
+    @apply text-[#3A7CFD];
   }
 }

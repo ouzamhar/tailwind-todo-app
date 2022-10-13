@@ -6,15 +6,26 @@ module.exports = {
       sans: ["Josefin Sans", "sans-serif"],
     },
     fontSize: {
-      sm: ["14px", "20px"],
-      base: ["12px", "24px"],
-      lg: ["20px", "28px"],
+      xs: [
+        "12px",
+        {
+          lineHeight: "16px",
+        },
+      ],
+      sm: ["14px"],
+      md: [
+        "18px",
+        {
+          lineHeight: "24px",
+        },
+      ],
+      // base: ["12px", "24px"],
       lg: [
-        "26px",
+        "28px",
         {
           letterSpacing: "10px",
           fontWeight: "700",
-          lineHeight: "50px",
+          // lineHeight: "50px",
         },
       ],
       xl: [
@@ -45,10 +56,10 @@ module.exports = {
         desk: "url('/images/bg-light-desk.png')",
       },
       screens: {
-        sm: "320px",
-        // => @media (min-width: 375px) { ... }
         md: "600px",
-        lg: "900px",
+      },
+      boxShadow: {
+        "2md": "0 35px 50px -15px rgba(194, 195, 214, 0.5)",
       },
     },
   },
